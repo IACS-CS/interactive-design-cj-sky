@@ -3,40 +3,50 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="A simple interactive design project."
-    />
+    <meta name="description" content="A simple interactive design project." />
     <title>My Interactive Design!</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <base href="./" />
   </head>
   <body>
     <h1>What You Should Wear</h1>
-   <p>Welcome to "What You Should Wear"! Answer the following questions to see which of Sky's outfits best suits you!</p>
-   <ol>
-    <li>What is your favorite season?</li>
-      <ul>
-        <li>Winter</li>
-        <li>Spring</li>
-        <li>Summer</li>
-        <li>Fall</li>
-      </ul>
-    <li>How do you like to spend an average weekend?</li>
-      <ul>
-        <li>Netflix & Chill</li>
-        <li>Being active</li>
-        <li>Partying</li>
-        <li>Working</li>
-      </ul>
-    <li>What is your style?</li>
-      <ul>
-        <li>Fancy</li>
-        <li>Casual</li>
-        <li>Sporty</li>
-        <li>Trendy</li>
-      </ul>
-   </ol>
+    <p>
+      Welcome to "What You Should Wear"! Answer the following questions to see
+      which of Sky's outfits best suits you!
+    </p>
+    <ol>
+      <li>
+        <span class="question-text">What is your favorite season?</span>
+        <ul class="no-bullet">
+          <!-- Chatbot made every list item in this file a button -->
+          <li><input type="radio" name="season" class="option-button">Winter</input></li>
+          <li><input type="radio" name="season" class="option-button">Spring</input></li>
+          <li><input type="radio" name="season" class="option-button">Summer</input></li>
+          <li><input type="radio" name="season" class="option-button">Fall</input></li>
+        </ul>
+      </li>
+      <li>
+        <span class="question-text"
+          >How do you like to spend an average weekend?</span
+        >
+        <ul class="no-bullet">
+          <li><input type="radio" name="weekend" class="option-button">Netflix &amp; Chill</input></li>
+          <li><input type="radio" name="weekend" class="option-button">Being active</input></li>
+          <li><input type="radio" name="weekend" class="option-button">Partying</input></li>
+          <li><input type="radio" name="weekend" class="option-button">Working</input></li>
+        </ul>
+      </li>
+      <li>
+        <span class="question-text">What is your style?</span>
+        <ul class="no-bullet">
+          <li><input type="radio" name="style" class="option-button">Fancy</input></li>
+          <li><input type="radio" name="style" class="option-button">Casual</input></li>
+          <li><input type="radio" name="style" class="option-button">Sporty</input></li>
+          <li><input type="radio" name="style" class="option-button">Trendy</input></li>
+        </ul>
+      </li>
+    </ol>
+    <p><button class="option-button">Click here to see your outfit!</button></p>
     <hr />
     <small>
       <a href="citations.html">Citations</a>

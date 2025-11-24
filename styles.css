@@ -1,29 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
+/* AI generated content starts here */
 /* Page background using fabric.webp in the images/ folder */
 html,
 body {
   height: 100%;
   margin: 0;
+  padding-left: 0.5rem;
 }
 
 body {
   /* Use the fabric image from the images folder */
-  background-image: url("images/fabric.webp");
+  background-image: url("images/theatre-curtains.jpg");
   background-size: cover; /* cover the viewport while preserving aspect */
   background-position: center center; /* center the pattern */
   background-repeat: no-repeat;
   /* Make sure text remains readable against the background */
   color: #0c2788;
   font-family: "Aladin";
-}
-
-/* Optional: add a subtle overlay for improved contrast on top of the image */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.25); /* light translucent layer */
-  pointer-events: none;
 }
 
 /* Small page layout niceties */
@@ -35,4 +28,10 @@ section {
 
 h1 {
   margin: 1rem 0 0.5rem 0;
+}
+/*AI generated content ends here */
+ul.no-bullet {
+  list-style-type: none;
+  padding-left: 0.25rem;
+  padding-bottom: 1rem;
 }
