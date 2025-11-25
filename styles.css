@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Aladin&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Aladin&display=swap");
 /* AI generated content starts here */
 /* Page background using fabric.webp in the images/ folder */
 html,
@@ -15,7 +15,7 @@ body {
   background-position: center center; /* center the pattern */
   background-repeat: no-repeat;
   /* Make sure text remains readable against the background */
-  color: #0c2788;
+  color: #76d4e3;
   font-family: "Aladin";
 }
 
@@ -34,4 +34,46 @@ ul.no-bullet {
   list-style-type: none;
   padding-left: 0.25rem;
   padding-bottom: 1rem;
+}
+
+a {
+  color: #ece40b;
+}
+
+small.citations-link {
+  /* AI content starts here*/
+  /* Pin the citations link to the right side of the viewport */
+  position: fixed; /* stay in the same place when scrolling */
+  right: 1.75rem; /* distance from the right edge */
+  top: 1rem; /* distance from the top edge (change to bottom if preferred) */
+  background: #76d4e3a3; /* subtle backdrop for readability */
+  padding: 0.25rem 0.5rem; /* a little space around the link */
+  border-radius: 6px; /* soft corners */
+  z-index: 999; /* keep it above other content */
+  font-size: 0.9rem;
+}
+
+/* Ensure the link color remains visible and tidy inside the pinned box */
+small.citations-link a {
+  color: #ece40b;
+  text-decoration: none;
+}
+/* AI content ends here */
+
+small.citations-link:hover {
+  transform: scale(1.5);
+  transform-origin: left;
+  display: inline-block;
+}
+
+button.option-button{
+position: fixed;
+left: 44.5%;
+top: 75%;
+}
+
+button.option-button:hover {
+  transform: scale(1.5);
+  transform-origin: center;
+  display: inline-block;
 }
