@@ -17,6 +17,7 @@ body {
   /* Make sure text remains readable against the background */
   color: #76d4e3;
   font-family: "Aladin";
+  font-size: large;
 }
 
 /* Small page layout niceties */
@@ -61,19 +62,27 @@ small.citations-link a {
 /* AI content ends here */
 
 small.citations-link:hover {
-  transform: scale(1.5);
-  transform-origin: left;
+  transform: scale(1.75);
+  transform-origin: center;
   display: inline-block;
 }
 
 button.option-button{
 position: fixed;
 left: 44.5%;
-top: 75%;
+top: 90%;
 }
 
 button.option-button:hover {
   transform: scale(1.5);
   transform-origin: center;
   display: inline-block;
+}
+
+label{
+  transition: filter 0.2s ease;
+}
+
+label:hover{
+  filter:brightness(2)
 }

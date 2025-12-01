@@ -19,10 +19,10 @@
         <span class="question-text">What is your favorite season?</span>
         <ul class="no-bullet">
           <!-- We origionally used AI to make the buttons, but then Roee helped us change the buttons to radio buttons -->
-          <li><input type="radio" name="season" class="option-button">Winter</input></li>
-          <li><input type="radio" name="season" class="option-button">Spring</input></li>
-          <li><input type="radio" name="season" class="option-button">Summer</input></li>
-          <li><input type="radio" name="season" class="option-button">Fall</input></li>
+          <li><label><input type="radio" name="season" class="option-button" data-season="winter">Winter</label></input></li>
+          <li><label><input type="radio" name="season" class="option-button" data-season="spring">Spring</label></input></li>
+          <li><label><input type="radio" name="season" class="option-button" data-season="summer">Summer</label></input></li>
+          <li><label><input type="radio" name="season" class="option-button" data-season="fall">Fall</label></input></li>
         </ul>
       </li>
       <li>
@@ -30,23 +30,22 @@
           >How do you like to spend an average weekend?</span
         >
         <ul class="no-bullet">
-          <li><input type="radio" name="weekend" class="option-button">Netflix &amp; Chill</input></li>
-          <li><input type="radio" name="weekend" class="option-button">Being active</input></li>
-          <li><input type="radio" name="weekend" class="option-button">Partying</input></li>
-          <li><input type="radio" name="weekend" class="option-button">Working</input></li>
+          <li><label><input type="radio" name="weekend" class="option-button" data-weekend="chill">Netflix &amp; Chill</label></input></li>
+          <li><label><input type="radio" name="weekend" class="option-button" data-weekend="work">Working</label></input></li>
+          <li><label><input type="radio" name="weekend" class="option-button" data-weekend="party">Partying</label></input></li>
         </ul>
       </li>
       <li>
         <span class="question-text">What is your style?</span>
         <ul class="no-bullet">
-          <li><input type="radio" name="style" class="option-button">Fancy</input></li>
-          <li><input type="radio" name="style" class="option-button">Casual</input></li>
-          <li><input type="radio" name="style" class="option-button">Sporty</input></li>
-          <li><input type="radio" name="style" class="option-button">Trendy</input></li>
+          <li><label><input type="radio" name="style" class="option-button" data-style="fancy">Fancy</label></input></li>
+          <li><label><input type="radio" name="style" class="option-button" data-style="casual">Casual</label></input></li>
+          <li><label><input type="radio" name="style" class="option-button" data-style="sporty">Sporty</label></input></li>
         </ul>
       </li>
     </ol>
-    <p><button class="option-button">Click here to see your outfit!</button></p>
+    <p><button class="option-button" id="results">Click here to see your outfit!</button></p>
+    <p><button class="option-button" id="reset-button">Reset</button></p>
     <!-- <hr /> -->
     <small class="citations-link">
       <a href="citations.html">Citations</a>
