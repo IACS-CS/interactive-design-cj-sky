@@ -68,12 +68,24 @@ small.citations-link:hover {
 }
 
 button.option-button{
-position: fixed;
+position: absolute;
 left: 44.5%;
 top: 90%;
 }
 
 button.option-button:hover {
+  transform: scale(1.5);
+  transform-origin: center;
+  display: inline-block;
+}
+
+button.resest-button{
+position: absolute;
+left: 3%;
+top: 90%;
+}
+
+button.resest-button:hover{
   transform: scale(1.5);
   transform-origin: center;
   display: inline-block;
@@ -85,4 +97,8 @@ label{
 
 label:hover{
   filter:brightness(2)
+}
+
+.hidden {
+  display: none;
 }
