@@ -119,20 +119,116 @@ updateResultsButtonVisibility();
 //
 // For each combination, we define a resulting pant style (URL) and shirt style (URL).
 let resultsData = {
-  "casual_cold_chill": {
-    "pants": "SkysDrawings/Bluesweats.png",
-    "shirt": "SkysDrawings/Blueshirt.png"
+  casual_cold_chill: {
+    pants: "SkysDrawings/Pantblue.PNG",
+    shirt: "SkysDrawings/Pinkshirt.PNG",
   },
-  "casual_cold_work": {
-    "pants": "images/casual_cold_work_pants.png",
-    "shirt": "images/casual_cold_work_shirt.png"
+  casual_cold_work: {
+    pants: "SkysDrawings/Bluesweats.png",
+    shirt: "SkysDrawings/Greenjacket.png",
   },
-  "casual_cold_party": {
-    "pants": "images/casual_cold_party_pants.png",
-    "shirt": "images/casual_cold_party_shirt.png"
+  casual_cold_party: {
+    pants: "SkysDrawings/Pantgreen.PNG",
+    shirt: "SkysDrawings/Purpleshirt.PNG",
   },
-}
-  // ... (fill in all other combinations similarly)
+  casual_warm_chill: {
+    pants: "SkysDrawings/PantBrown.PNG",
+    shirt: "SkysDrawings/Blueshirt.PNG",
+  },
+  casual_warm_work: {
+    pants: "SkysDrawings/Greensweats.png",
+    shirt: "SkysDrawings/Bluejacket.png",
+  },
+  casual_warm_party: {
+    pants: "SkysDrawings/Pantpink.PNG",
+    shirt: "SkysDrawings/Purpleshirt.PNG",
+  },
+  casual_hot_chill: {
+    pants: "SkysDrawings/Pantpurple.PNG",
+    shirt: "SkysDrawings/Greent.png",
+  },
+  casual_hot_work: {
+    pants: "SkysDrawings/PantBrown.PNG",
+    shirt: "SkysDrawings/Bluet.png",
+  },
+  casual_hot_party: {
+    pants: "SkysDrawings/Pantblue.PNG",
+    shirt: "SkysDrawings/Pinkt.png",
+  },
+  fancy_cold_chill: {
+    pants: "SkysDrawings/Bluesweats.png",
+    shirt: "SkysDrawings/Pinkjacket.png",
+  },
+  fancy_cold_work: {
+    pants: "images/fancy_cold_work_pants.png",
+    shirt: "images/fancy_cold_work_shirt.png",
+  },
+  fancy_cold_party: {
+    pants: "images/fancy_cold_party_pants.png",
+    shirt: "images/fancy_cold_party_shirt.png",
+  },
+  fancy_warm_chill: {
+    pants: "images/fancy_warm_chill_pants.png",
+    shirt: "images/fancy_warm_chill_shirt.png",
+  },
+  fancy_warm_work: {
+    pants: "images/fancy_warm_work_pants.png",
+    shirt: "images/fancy_warm_work_shirt.png",
+  },
+  fancy_warm_party: {
+    pants: "images/fancy_warm_party_pants.png",
+    shirt: "images/fancy_warm_party_shirt.png",
+  },
+  fancy_hot_chill: {
+    pants: "images/fancy_hot_chill_pants.png",
+    shirt: "images/fancy_hot_chill_shirt.png",
+  },
+  fancy_hot_work: {
+    pants: "images/fancy_hot_work_pants.png",
+    shirt: "images/fancy_hot_work_shirt.png",
+  },
+  fancy_hot_party: {
+    pants: "images/fancy_hot_party_pants.png",
+    shirt: "images/fancy_hot_party_shirt.png",
+  },
+  sporty_cold_chill: {
+    pants: "images/sporty_cold_chill_pants.png",
+    shirt: "images/sporty_cold_chill_shirt.png",
+  },
+  sporty_cold_work: {
+    pants: "images/sporty_cold_work_pants.png",
+    shirt: "images/sporty_cold_work_shirt.png",
+  },
+  sporty_cold_party: {
+    pants: "images/sporty_cold_party_pants.png",
+    shirt: "images/sporty_cold_party_shirt.png",
+  },
+  sporty_warm_chill: {
+    pants: "images/sporty_warm_chill_pants.png",
+    shirt: "images/sporty_warm_chill_shirt.png",
+  },
+  sporty_warm_work: {
+    pants: "images/sporty_warm_work_pants.png",
+    shirt: "images/sporty_warm_work_shirt.png",
+  },
+  sporty_warm_party: {
+    pants: "images/sporty_warm_party_pants.png",
+    shirt: "images/sporty_warm_party_shirt.png",
+  },
+  sporty_hot_chill: {
+    pants: "images/sporty_hot_chill_pants.png",
+    shirt: "images/sporty_hot_chill_shirt.png",
+  },
+  sporty_hot_work: {
+    pants: "images/sporty_hot_work_pants.png",
+    shirt: "images/sporty_hot_work_shirt.png",
+  },
+  sporty_hot_party: {
+    pants: "images/sporty_hot_party_pants.png",
+    shirt: "images/sporty_hot_party_shirt.png",
+  },
+};
+  // fill in the rest of the 27 combinations similarly...
 
   // When they press the results button, we read their selected options,
   // look up the corresponding outfit in resultsData, and display it.
@@ -154,6 +250,7 @@ let resultsData = {
         let pantsImg = document.getElementById("pants-image");
         let shirtImg = document.getElementById("shirt-image");
         if (pantsImg && shirtImg) {
+          console.log('Setting images',outfit)
           pantsImg.src = outfit.pants;
           shirtImg.src = outfit.shirt;
         }
@@ -162,3 +259,15 @@ let resultsData = {
       }
     });
   }
+  //hide the images when reset is clicked or when the answers are changed
+  var images = document.querySelectorAll("#pants-image, #shirt-image");
+  function hideImages() {
+    console.log('Hiding images');
+    images.forEach(function(img) {
+      img.src = "";
+    });
+  }
+  resetButton.addEventListener("click", hideImages);
+  optionButtons.forEach(function(btn) {
+    btn.addEventListener("click", hideImages);
+  }); 
