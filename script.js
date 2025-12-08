@@ -258,15 +258,4 @@ let resultsData = {
       }
     });
   }
-  //hide the images when reset is clicked or when the answers are changed
-  var images = document.querySelectorAll("#pants-image, #shirt-image");
-  function hideImages() {
-    console.log('Hiding images');
-    images.forEach(function(img) {
-      img.src = "";
-    });
-  }
-  resetButton.addEventListener("click", hideImages);
-  optionButtons.forEach(function(btn) {
-    btn.addEventListener("click", hideImages);
-  }); 
+  
