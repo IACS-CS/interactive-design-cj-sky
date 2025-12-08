@@ -129,7 +129,7 @@ let resultsData = {
   },
   casual_cold_party: {
     pants: "SkysDrawings/Pantgreen.PNG",
-    shirt: "SkysDrawings/Purpleshirt.PNG",
+    shirt: "SkysDrawings/Pinkshirt.PNG",
   },
   casual_warm_chill: {
     pants: "SkysDrawings/PantBrown.PNG",
@@ -141,18 +141,18 @@ let resultsData = {
   },
   casual_warm_party: {
     pants: "SkysDrawings/Pantpink.PNG",
-    shirt: "SkysDrawings/Purpleshirt.PNG",
+    shirt: "SkysDrawings/Greenshirt.PNG",
   },
   casual_hot_chill: {
-    pants: "SkysDrawings/Pantpurple.PNG",
+    pants: "SkysDrawings/purpleshorts.png",
     shirt: "SkysDrawings/Greent.png",
   },
   casual_hot_work: {
-    pants: "SkysDrawings/PantBrown.PNG",
+    pants: "SkysDrawings/Orangeshorts.png",
     shirt: "SkysDrawings/Bluet.png",
   },
   casual_hot_party: {
-    pants: "SkysDrawings/Pantblue.PNG",
+    pants: "SkysDrawings/blueshorts.png",
     shirt: "SkysDrawings/Pinkt.png",
   },
   fancy_cold_chill: {
@@ -160,75 +160,74 @@ let resultsData = {
     shirt: "SkysDrawings/Pinkjacket.png",
   },
   fancy_cold_work: {
-    pants: "images/fancy_cold_work_pants.png",
-    shirt: "images/fancy_cold_work_shirt.png",
+    pants: "SkysDrawings/Pantgreen.PNG",
+    shirt: "SkysDrawings/Bluejacket.png",
   },
   fancy_cold_party: {
-    pants: "images/fancy_cold_party_pants.png",
-    shirt: "images/fancy_cold_party_shirt.png",
+    pants: "SkysDrawings/PantBrown.PNG",
+    shirt: "SkysDrawings/Greenjacket.png",
   },
   fancy_warm_chill: {
-    pants: "images/fancy_warm_chill_pants.png",
-    shirt: "images/fancy_warm_chill_shirt.png",
+    pants: "SkysDrawings/blacksweats.png",
+    shirt: "SkysDrawings/Orangejacket.png",
   },
   fancy_warm_work: {
-    pants: "images/fancy_warm_work_pants.png",
-    shirt: "images/fancy_warm_work_shirt.png",
+    pants: "SkysDrawings/Greensweats.png",
+    shirt: "SkysDrawings/Redjacket.png",
   },
   fancy_warm_party: {
-    pants: "images/fancy_warm_party_pants.png",
-    shirt: "images/fancy_warm_party_shirt.png",
+    pants: "SkysDrawings/Pantblue.PNG",
+    shirt: "SkysDrawings/Pinkjacket.png",
   },
   fancy_hot_chill: {
-    pants: "images/fancy_hot_chill_pants.png",
-    shirt: "images/fancy_hot_chill_shirt.png",
+    pants: "SkysDrawings/purpleshorts.png",
+    shirt: "SkysDrawings/Blueshirt.PNG",
   },
   fancy_hot_work: {
-    pants: "images/fancy_hot_work_pants.png",
-    shirt: "images/fancy_hot_work_shirt.png",
+    pants: "SkysDrawings/Blueshorts.png",
+    shirt: "SkysDrawings/Greenshirt.PNG",
   },
   fancy_hot_party: {
-    pants: "images/fancy_hot_party_pants.png",
-    shirt: "images/fancy_hot_party_shirt.png",
+    pants: "SkysDrawings/pinkshorts.png",
+    shirt: "SkysDrawings/Purpleshirt.PNG",
   },
   sporty_cold_chill: {
-    pants: "images/sporty_cold_chill_pants.png",
-    shirt: "images/sporty_cold_chill_shirt.png",
+    pants: "SkysDrawings/Greensweats.png",
+    shirt: "SkysDrawings/Bluet.png",
   },
   sporty_cold_work: {
-    pants: "images/sporty_cold_work_pants.png",
-    shirt: "images/sporty_cold_work_shirt.png",
+    pants: "SkysDrawings/blacksweats.png",
+    shirt: "SkysDrawings/Blueshirt.PNG",
   },
   sporty_cold_party: {
-    pants: "images/sporty_cold_party_pants.png",
-    shirt: "images/sporty_cold_party_shirt.png",
+    pants: "SkysDrawings/Bluesweats.png",
+    shirt: "SkysDrawings/Purpleshirt.PNG",
   },
   sporty_warm_chill: {
-    pants: "images/sporty_warm_chill_pants.png",
-    shirt: "images/sporty_warm_chill_shirt.png",
+    pants: "SkysDrawings/Bluesweats.png",
+    shirt: "SkysDrawings/Greent.png",
   },
   sporty_warm_work: {
-    pants: "images/sporty_warm_work_pants.png",
-    shirt: "images/sporty_warm_work_shirt.png",
+    pants: "SkysDrawings/blacksweats.png",
+    shirt: "SkysDrawings/yellowt.png",
   },
   sporty_warm_party: {
-    pants: "images/sporty_warm_party_pants.png",
-    shirt: "images/sporty_warm_party_shirt.png",
+    pants: "SkysDrawings/Greenshorts.png",
+    shirt: "SkysDrawings/Pinkt.png",
   },
   sporty_hot_chill: {
-    pants: "images/sporty_hot_chill_pants.png",
-    shirt: "images/sporty_hot_chill_shirt.png",
+    pants: "SkysDrawings/Orangeshorts.png",
+    shirt: "SkysDrawings/Bluet.png",
   },
   sporty_hot_work: {
-    pants: "images/sporty_hot_work_pants.png",
-    shirt: "images/sporty_hot_work_shirt.png",
+    pants: "SkysDrawings/Greenshorts.png",
+    shirt: "SkysDrawings/Pinkt.png",
   },
   sporty_hot_party: {
-    pants: "images/sporty_hot_party_pants.png",
-    shirt: "images/sporty_hot_party_shirt.png",
+    pants: "SkysDrawings/purpleshorts.png",
+    shirt: "SkysDrawings/yellowt.png",
   },
 };
-  // fill in the rest of the 27 combinations similarly...
 
   // When they press the results button, we read their selected options,
   // look up the corresponding outfit in resultsData, and display it.
