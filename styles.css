@@ -76,6 +76,11 @@ ul {
   border-radius: 8px; /* rounded corners for a friendly look */
   transition: background 0.2s ease; /* smooth fade-in effect */
 }
+/*
+  Add spacing between each item in the citations list.*/
+.citations-list > li {
+  margin-bottom: 15px; /* adds space below each citation */
+}
 /* AI-generated code ends here */
 p {
   font-size: 25px;
@@ -199,4 +204,18 @@ label:hover {
   max-height: 40%;
   /* Images should not block clicks to controls beneath/above them */
   pointer-events: none;
+}
+
+ul.citations-list {
+  position: absolute;
+  left: 19.4%;
+  top: 15%;
+  width: 70%;
+  max-width: 900px;
+  padding: 1px 1.25px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.502); /* white with 85% opacity */
+  list-style-type: none;
+  padding-left: 2.25px;
+  padding-bottom: 0.5px;
 }
