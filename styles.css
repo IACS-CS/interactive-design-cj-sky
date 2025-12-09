@@ -16,9 +16,9 @@ body {
   background-position: center center; /* center the pattern */
   background-repeat: no-repeat;
   /* Make sure text remains readable against the background */
-  color: #071c96;
+  color: #00158e;
   font-family: "Aladin";
-  font-size: large;
+  font-size: x-large;
 }
 
 /* Centered question container placed in the middle of the viewport */
@@ -50,11 +50,13 @@ h1 {
 ul {
   list-style-type: none;
   padding-left: 0.25px;
-  padding-bottom: 1px;
+  padding-bottom: 0.5px;
 }
 
 p {
-  font-size: 1.25px;
+  font-size: 25px;
+  margin-top: 0.5px;
+  margin-bottom: 0.5px;
 }
 
 a {
@@ -65,12 +67,12 @@ small.citations-link {
   /* AI content starts here*/
   /* Pin the citations link to the right side of the viewport */
   position: fixed; /* stay in the same place when scrolling */
-  right: 1.75px; /* distance from the right edge */
-  top: 1px; /* distance from the top edge (change to bottom if preferred) */
+  right: 35px; /* distance from the right edge */
+  top: 15px; /* distance from the top edge (change to bottom if preferred) */
   background: #76d4e3a3; /* subtle backdrop for readability */
   padding: 0.25px 0.5px; /* a little space around the link */
   border-radius: 6px; /* soft corners */
-  font-size: 0.9px;
+  font-size: 30px;
 }
 
 /* Ensure the link color remains visible and tidy inside the pinned box */
