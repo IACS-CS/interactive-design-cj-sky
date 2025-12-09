@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Aladin&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 /* AI generated content starts here */
 /* Page background using fabric.webp in the images/ folder */
 html,
 body {
   height: 100%;
   margin: 0;
-  padding-left: 0.5rem;
+  padding-left: 0.5px;
 }
 
 body {
@@ -15,26 +16,45 @@ body {
   background-position: center center; /* center the pattern */
   background-repeat: no-repeat;
   /* Make sure text remains readable against the background */
-  color: #76d4e3;
+  color: #071c96;
   font-family: "Aladin";
   font-size: large;
+}
+
+/* Centered question container placed in the middle of the viewport */
+#center-area {
+  position: absolute;
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 70%;
+  max-width: 900px;
+  padding: 1px 1.25px;
+  border-radius: 10px;
+  text-shadow: 1px 1px #ffffff7a, -1px -1px #ffffff7a, 1px -1px #ffffff7a;
+  pointer-events: none;
 }
 
 /* Small page layout niceties */
 main,
 header,
 section {
-  padding: 1rem;
+  padding: 1px;
 }
 
 h1 {
-  margin: 1rem 0 0.5rem 0;
+  margin: 1px 0 0.5px 0;
 }
 /*AI generated content ends here */
-ul.no-bullet {
+ul {
   list-style-type: none;
-  padding-left: 0.25rem;
-  padding-bottom: 1rem;
+  padding-left: 0.25px;
+  padding-bottom: 1px;
+}
+
+p {
+  font-size: 1.25px;
 }
 
 a {
@@ -45,13 +65,12 @@ small.citations-link {
   /* AI content starts here*/
   /* Pin the citations link to the right side of the viewport */
   position: fixed; /* stay in the same place when scrolling */
-  right: 1.75rem; /* distance from the right edge */
-  top: 1rem; /* distance from the top edge (change to bottom if preferred) */
+  right: 1.75px; /* distance from the right edge */
+  top: 1px; /* distance from the top edge (change to bottom if preferred) */
   background: #76d4e3a3; /* subtle backdrop for readability */
-  padding: 0.25rem 0.5rem; /* a little space around the link */
+  padding: 0.25px 0.5px; /* a little space around the link */
   border-radius: 6px; /* soft corners */
-  z-index: 999; /* keep it above other content */
-  font-size: 0.9rem;
+  font-size: 0.9px;
 }
 
 /* Ensure the link color remains visible and tidy inside the pinned box */
@@ -67,10 +86,29 @@ small.citations-link:hover {
   display: inline-block;
 }
 
-button.results-button{
-position: absolute;
-left: 44.5%;
-top: 90%;
+button.results-button {
+  position: absolute;
+  left: 40%;
+  top: 89%;
+  background-color: #822020;
+  border: none;
+  color: #76d4e3;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-family: "Alfa Slab One";
+}
+
+/* Allow interactive elements inside the center-area to receive pointer events */
+#center-area input,
+#center-area label,
+#center-area button,
+#center-area select,
+#center-area textarea {
+  pointer-events: auto;
 }
 
 button.results-button:hover {
@@ -79,24 +117,36 @@ button.results-button:hover {
   display: inline-block;
 }
 
-button.resest-button{
-position: absolute;
-left: 3%;
-top: 90%;
+button.resest-button {
+  position: absolute;
+  left: 3%;
+  top: 89%;
+  background-color: #27471a;
+  border: none;
+  color: #76d4e3;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-family: "Alfa Slab One";
 }
 
-button.resest-button:hover{
+button.resest-button:hover {
   transform: scale(1.5);
   transform-origin: center;
   display: inline-block;
 }
 
-label{
+label {
   transition: filter 0.2s ease;
 }
 
-label:hover{
-  filter:brightness(2)
+label:hover {
+  filter: brightness(4);
 }
 
 .hidden {
@@ -106,17 +156,21 @@ label:hover{
 #shirt-image {
   position: absolute;
   left: 40%;
-  top: 50%;
+  top: 55%;
   transform: translate(-50%, -50%);
   max-width: 40%;
   max-height: 40%;
+  /* Images should not block clicks to controls beneath/above them */
+  pointer-events: none;
 }
 
 #pants-image {
   position: absolute;
   left: 60%;
-  top: 50%;
+  top: 55%;
   transform: translate(-50%, -50%);
   max-width: 40%;
   max-height: 40%;
+  /* Images should not block clicks to controls beneath/above them */
+  pointer-events: none;
 }

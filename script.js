@@ -28,7 +28,6 @@ for (var i = 0; i < optionButtons.length; i++) {
     }
   });
 }
-
 // Find the reset button by its id. In the HTML it's `id="reset-button"`.
 var resetButton = document.getElementById("reset-button");
 if (resetButton) {
@@ -38,9 +37,9 @@ if (resetButton) {
   // 3) Clear any text inputs (if present)
   resetButton.addEventListener("click", function () {
     // add hidden class to results button
-    var resultsButton = document.querySelector('button#results');
+    var resultsButton = document.querySelector("button#results");
     if (resultsButton) {
-      resultsButton.classList.add('hidden');
+      resultsButton.classList.add("hidden");
     }
     // 1) Uncheck all radio buttons on the page
     var radios = document.querySelectorAll('input[type="radio"]');
@@ -61,7 +60,6 @@ if (resetButton) {
     for (var n = 0; n < texts.length; n++) {
       texts[n].value = "";
     }
-
     // If the app used localStorage to save answers, clear those keys too.
     // We don't know exact keys, so as a safe option we remove common ones.
     try {
@@ -73,45 +71,49 @@ if (resetButton) {
       // If localStorage is not available, ignore the error.
       console.log("localStorage not available or cleared");
     }
-
     // Give a small console message so students can see the reset happened.
+    // Show the questions again when reset is clicked
+    var centerArea = document.getElementById("center-area");
+    if (centerArea) {
+      centerArea.classList.remove("hidden");
+    }
     console.log("All answers have been reset");
   });
 }
 // AI-generated code ends here
 
-// When an option button is clicked, check if we have 
+// When an option button is clicked, check if we have
 // a selected value for each question (style, season, weekend)
 // and if so, show the results button; otherwise hide it.
-var questions = ['style', 'temp', 'weekend'];
+var questions = ["style", "temp", "weekend"];
 function updateResultsButtonVisibility() {
   // Check if all questions have a selected answer
-  var allAnswered = questions.every(function(q) {
+  var allAnswered = questions.every(function (q) {
     return document.querySelector('input[name="' + q + '"]:checked') !== null;
   });
   // Show or hide the results button based on whether all are answered
-  var resultsButton = document.querySelector('button#results');
+  var resultsButton = document.querySelector("button#results");
   if (resultsButton) {
     // If all questions are answered, show the results button
     if (allAnswered) {
       // Show the results button
-      resultsButton.classList.remove('hidden');
+      resultsButton.classList.remove("hidden");
     } else {
       // Hide the results button
-      resultsButton.classList.add('hidden');
+      resultsButton.classList.add("hidden");
     }
   }
 }
 // Attach the update function to each option button click
-optionButtons.forEach(function(btn) {
+optionButtons.forEach(function (btn) {
   // For each option button, add a click listener that updates results button visibility
-  btn.addEventListener('click', updateResultsButtonVisibility);
+  btn.addEventListener("click", updateResultsButtonVisibility);
 });
 // Initial check in case some options are pre-selected
-updateResultsButtonVisibility(); 
+updateResultsButtonVisibility();
 
 // Build the "results" button data structure.
-// We have three questions: 
+// We have three questions:
 // - style: casual, fancy, sporty
 // - temp: cold, warm, hot
 // - weekend: chill, work, party
@@ -229,33 +231,61 @@ let resultsData = {
   },
 };
 
-  // When they press the results button, we read their selected options,
-  // look up the corresponding outfit in resultsData, and display it.
-  let resultsButton = document.getElementById("results");
-  if (resultsButton) {
-    resultsButton.addEventListener("click", function() {
-      // Get selected options
-      let style = document.querySelector('input[name="style"]:checked').value;
-      let temp = document.querySelector('input[name="temp"]:checked').value;
-      let weekend = document.querySelector('input[name="weekend"]:checked').value;
+// When they press the results button, we read their selected options,
+// look up the corresponding outfit in resultsData, and display it.
+let resultsButton = document.getElementById("results");
+if (resultsButton) {
+  resultsButton.addEventListener("click", function () {
+    // Get selected options
+    let style = document.querySelector('input[name="style"]:checked').value;
+    let temp = document.querySelector('input[name="temp"]:checked').value;
+    let weekend = document.querySelector('input[name="weekend"]:checked').value;
 
-      // Build the key to look up in resultsData
-      let resultKey = style + "_" + temp + "_" + weekend;
+    // Build the key to look up in resultsData
+    let resultKey = style + "_" + temp + "_" + weekend;
 
-      // Look up the outfit
-      let outfit = resultsData[resultKey];
-      if (outfit) {
-        // Display the outfit images
-        let pantsImg = document.getElementById("pants-image");
-        let shirtImg = document.getElementById("shirt-image");
-        if (pantsImg && shirtImg) {
-          console.log('Setting images',outfit)
-          pantsImg.src = outfit.pants;
-          shirtImg.src = outfit.shirt;
-        }
-      } else {
-        console.log("No outfit found for selection:", resultKey);
+    // Look up the outfit
+    let outfit = resultsData[resultKey];
+    if (outfit) {
+      // Display the outfit images
+      let pantsImg = document.getElementById("pants-image");
+      let shirtImg = document.getElementById("shirt-image");
+      if (pantsImg && shirtImg) {
+        console.log("Setting images", outfit);
+        pantsImg.src = outfit.pants;
+        shirtImg.src = outfit.shirt;
       }
-    });
-  }
-  
+      // Hide the questions when showing results so the page looks like a result view
+      var centerArea = document.getElementById("center-area");
+      if (centerArea) {
+        centerArea.classList.add("hidden");
+      }
+    } else {
+      console.log("No outfit found for selection:", resultKey);
+    }
+  });
+}
+
+//when reset button is clicked, clear outfit images
+if (resetButton) {
+  resetButton.addEventListener("click", function () {
+    let pantsImg = document.getElementById("pants-image");
+    let shirtImg = document.getElementById("shirt-image");
+    if (pantsImg && shirtImg) {
+      pantsImg.src = "images/blank.png";
+      shirtImg.src = "images/blank.png";
+    }
+  });
+}
+
+//when answer is changed, clear outfit images
+optionButtons.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    let pantsImg = document.getElementById("pants-image");
+    let shirtImg = document.getElementById("shirt-image");
+    if (pantsImg && shirtImg) {
+      pantsImg.src = "images/blank.png";
+      shirtImg.src = "images/blank.png";
+    }
+  });
+});

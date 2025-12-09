@@ -9,14 +9,15 @@
     <base href="./" />
   </head>
   <body>
+    <div id="center-area">
     <h1>What You Should Wear</h1>
     <p>
       Welcome to "What You Should Wear"! Answer the following questions to see
       which of Sky's outfits best suits you!
     </p>
-    <ol>
+    <ul id="questions">
       <li>
-        <span class="question-text">How would you describe the temperature?</span>
+        <span class="question-text">Question 1: How would you describe the temperature?</span>
         <ul class="no-bullet">
           <!-- We origionally used AI to make the buttons, but then Roee helped us change the buttons to radio buttons -->
           <li><label><input type="radio" name="temp" class="option-button" value="cold">Cold</label></input></li>
@@ -26,7 +27,7 @@
       </li>
       <li>
         <span class="question-text"
-          >How do you like to spend an average weekend?</span
+          >Question 2: How do you like to spend an average weekend?</span
         >
         <ul class="no-bullet">
           <li><label><input type="radio" name="weekend" class="option-button" value="chill">Netflix &amp; Chill</label></input></li>
@@ -35,14 +36,15 @@
         </ul>
       </li>
       <li>
-        <span class="question-text">What is your style?</span>
+        <span class="question-text">Question 3: What is your style?</span>
         <ul class="no-bullet">
           <li><label><input type="radio" name="style" class="option-button" value="fancy">Fancy</label></input></li>
           <li><label><input type="radio" name="style" class="option-button" value="casual">Casual</label></input></li>
           <li><label><input type="radio" name="style" class="option-button" value="sporty">Sporty</label></input></li>
         </ul>
       </li>
-    </ol>
+    </ul>
+    </div>
     <p><button class="results-button" id="results">Click here to see your outfit!</button></p>
     <p><button class="resest-button" id="reset-button">Reset Answers</button></p>
     <img id="shirt-image" src="images/blank.png" alt="Shirt Image" />
