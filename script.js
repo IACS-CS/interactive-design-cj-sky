@@ -222,7 +222,7 @@ let resultsData = {
     shirt: "SkysDrawings/Bluet.png",
   },
   sporty_hot_work: {
-    pants: "SkysDrawings/Greenshorts.png",
+    pants: "SkysDrawings/Orangeshorts.png",
     shirt: "SkysDrawings/Pinkt.png",
   },
   sporty_hot_party: {

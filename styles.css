@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Aladin&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
 /* AI generated content starts here */
-/* Page background using fabric.webp in the images/ folder */
 html,
 body {
   height: 100%;
@@ -10,7 +9,6 @@ body {
 }
 
 body {
-  /* Use the fabric image from the images folder */
   background-image: url("images/theatre-curtains.jpg");
   background-size: cover; /* cover the viewport while preserving aspect */
   background-position: center center; /* center the pattern */
@@ -18,14 +16,13 @@ body {
   /* Make sure text remains readable against the background */
   color: #00158e;
   font-family: "Aladin";
-  font-size: x-large;
+  font-size: 22px;
 }
-
 /* Centered question container placed in the middle of the viewport */
 #center-area {
   position: absolute;
   left: 50%;
-  top: 58%;
+  top: 62%;
   transform: translate(-50%, -50%);
   text-align: center;
   width: 70%;
@@ -34,8 +31,10 @@ body {
   border-radius: 10px;
   text-shadow: 1px 1px #ffffff7a, -1px -1px #ffffff7a, 1px -1px #ffffff7a;
   pointer-events: none;
+  /* Remove any gradient or background from the center area. */
+  /* Add a solid, semi-transparent background to help text readability. */
+  background: rgba(255, 255, 255, 0.502); /* white with 85% opacity */
 }
-
 /* Small page layout niceties */
 main,
 header,
@@ -45,6 +44,11 @@ section {
 
 h1 {
   margin: 1px 0 0.5px 0;
+  text-shadow: 1px 1px #ffffff9a, -1px -1px #ffffff9a, 1px -1px #ffffff9a;
+  position: absolute;
+  top: 15px;
+  left: 560px;
+  text-align: center;
 }
 /*AI generated content ends here */
 ul {
@@ -53,6 +57,26 @@ ul {
   padding-bottom: 0.5px;
 }
 
+/* AI-generated code starts here */
+/*
+  Add spacing between each question in the questions list.
+  This targets each <li> inside the #questions <ul>.
+  You can adjust the margin-bottom value for more or less space.
+*/
+#questions > li {
+  margin-bottom: 20px; /* adds space below each question */
+}
+/*
+  Give each question its own background ONLY when hovered over.
+  This helps highlight the question the user is focusing on.
+  You can change the background color below to fit your design.
+*/
+#questions > li:hover {
+  background: #76d4e3a3; /* light blue, semi-transparent */
+  border-radius: 8px; /* rounded corners for a friendly look */
+  transition: background 0.2s ease; /* smooth fade-in effect */
+}
+/* AI-generated code ends here */
 p {
   font-size: 25px;
   margin-top: 0.5px;
