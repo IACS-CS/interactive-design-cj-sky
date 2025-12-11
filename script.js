@@ -240,10 +240,8 @@ if (resultsButton) {
     let style = document.querySelector('input[name="style"]:checked').value;
     let temp = document.querySelector('input[name="temp"]:checked').value;
     let weekend = document.querySelector('input[name="weekend"]:checked').value;
-
     // Build the key to look up in resultsData
     let resultKey = style + "_" + temp + "_" + weekend;
-
     // Look up the outfit
     let outfit = resultsData[resultKey];
     if (outfit) {
@@ -265,7 +263,6 @@ if (resultsButton) {
     }
   });
 }
-
 //when reset button is clicked, clear outfit images
 if (resetButton) {
   resetButton.addEventListener("click", function () {
